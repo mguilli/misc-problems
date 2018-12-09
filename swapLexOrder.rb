@@ -1,3 +1,6 @@
+# Given a string str and array of pairs that indicates which indices in the string 
+# can be swapped, return the lexicographically largest string that results from
+# doing the allowed swaps. You can swap indices any number of times.
 
 str = "dznsxamwoj"
 pairs = [[1,2], 
@@ -17,7 +20,7 @@ def find_paths(pairs)
   paths = []
   vns = [] # visited nodes
   
-  # Traverse edges using a queue to document all existing paths between pairs
+  # Traverse edges using a queue to document all existing paths between nodes
   nodes.each do |node, edges|
     next if vns.include? node
     q = edges.clone
